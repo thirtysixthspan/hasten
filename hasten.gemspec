@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Hasten::VERSION
   spec.authors       = ["Derrick Parkhurst"]
   spec.email         = ["derrick.parkhurst@gmail.com"]
-  spec.summary       = "Hasten the import of mysqldumps dumps"
+  spec.summary       = "Hasten the import of mysqldump exports into mysql"
   spec.description   = "Hasten the import of mysql dumps, especially those containing very large innodb tables with multiple indexes."
   spec.homepage      = "http://github.com/thirtysixthspan/hasten"
   spec.license       = "MIT"
