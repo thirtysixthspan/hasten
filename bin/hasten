@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# Hasten (speed up) the import of mysql dumps containing very large
+# innodb tables with multiple indexes.
+#
+# Sets modes
+# Indexes are removed from all table definitions.
+# Indexes are added after all inserts are complete.
+#
+# usage:
+# cat DUMPFILE | hasten | mysql -uroot DATABASE
+#
+require 'hasten'
+
+
+Hasten::DEFAULT_MODES.each { |mode| puts mode }
+Hasten::Dump.new(STDIN, STDOUT).execute
+puts Hasten::COMMIT
