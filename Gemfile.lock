@@ -2,6 +2,10 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
+    faker (1.4.3)
+      i18n (~> 0.5)
+    i18n (0.7.0)
+    mysql2 (0.3.17)
     rake (10.3.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
@@ -16,5 +20,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faker
+  mysql2
   rake (= 10.3.2)
   rspec (~> 2.13.0)
