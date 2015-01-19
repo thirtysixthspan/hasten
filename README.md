@@ -6,11 +6,17 @@ Hasten
 Overview
 --------
 
-Hasten speeds up the import of mysql dumps containing very large innodb tables with multiple indexes by setting certain mysql modes, removing all indexes from table definitions, and then altering the tables to add the indexes back once all inserts have been completed.
+Hasten speeds up the import of mysql dumps containing very large innodb tables with multiple indexes by setting certain mysql modes, removing all indexes from table definitions, and then altering the tables to add the indexes back once all inserts have been completed. Check out [this blog post](http://thirtysixthspan.com/posts/hasten-the-import-of-large-tables-into-mysql) for more detail.
+
+INSTALL
+-------
+```
+gem install hasten
+```
 
 USAGE
 -----
-This gem provides an executable script `hasten` that can be used as follows to import SQL files exported from mysqldump.
+This Ruby gem provides an executable script `hasten` that can be used as follows to import SQL files exported from mysqldump.
 ```
 cat DUMPFILE | hasten | mysql -uUSER -pPASSWORD DATABASE
 ```
