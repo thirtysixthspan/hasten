@@ -21,6 +21,12 @@ This Ruby gem provides an executable script `hasten` that can be used as follows
 cat DUMPFILE | hasten | mysql -uUSER -pPASSWORD DATABASE
 ```
 
+To disable the default mode settings, which can sometimes require elevated privileges:
+```
+cat DUMPFILE | hasten --no-modes | mysql -uUSER -pPASSWORD DATABASE
+```
+
+
 Benchmark
 ---------
 Hasten comes with a [benchmarking tool](https://github.com/thirtysixthspan/hasten/blob/master/test/benchmark.rb), and using gnuplot, you can make pretty graphs:

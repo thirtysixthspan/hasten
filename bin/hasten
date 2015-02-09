@@ -12,6 +12,6 @@
 require 'hasten'
 
 
-Hasten::DEFAULT_MODES.each { |mode| puts mode }
+Hasten::DEFAULT_MODES.each { |mode| puts mode } unless ARGV[0] == "--no-modes"
 Hasten::Dump.new(STDIN, STDOUT).execute
 puts Hasten::COMMIT
