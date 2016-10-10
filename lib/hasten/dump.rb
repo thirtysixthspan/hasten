@@ -32,7 +32,7 @@ module Hasten
         return unless line = io_in.gets
 
         self.command = Command.new
-        self.command << line
+        self.command << line.encode("UTF-16be", :invalid=>:replace, :replace=>"?").encode('UTF-8')
         return command if command.complete?
 
         while line = io_in.gets
